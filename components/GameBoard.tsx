@@ -130,11 +130,11 @@ export const GameBoard = () => {
             ref={gameboardRef}
         >
             <h1 style={{color: '#00FF00'}}>Slippery Snake Matrix</h1>
-            <div>Score: {score}</div>
+            <div className={'text-white'}>Score: {score}</div>
             <div
                 style={{
-                    width: '800px',
-                    height: '800px',
+                    width: '400px',
+                    height: '400px',
                     display: 'grid',
                     gridTemplate: `repeat(${BOARD_SIZE}, 1fr) / repeat(${BOARD_SIZE}, 1fr)`,
                     gap: '1px',
@@ -147,11 +147,11 @@ export const GameBoard = () => {
             {gameOver && (
                 <div>
                     <div>Game Over!</div>
-                    <button onClick={handleStartGame}>Restart</button>
+                    <button className={'text-white'} onClick={handleStartGame}>Restart</button>
                 </div>
             )}
             {!gameStarted && !gameOver && (
-                <button onClick={handleStartGame}>Start Game</button>
+                <button className={'text-white'} onClick={handleStartGame}>Start Game</button>
             )}
         </div>
     );
